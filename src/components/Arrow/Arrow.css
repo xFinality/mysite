@@ -1,0 +1,20 @@
+.arrow {
+	width: 25px;
+	height: 25px;
+	border: solid black;
+ 	border-width: 0 3px 3px 0;
+  	display: inline-block;
+ 	padding: 3px;
+}
+
+.w-button {
+	width: 2.5em;
+}
+
+.button-prev {
+	transform: rotate(135deg);
+}
+
+.button-next {
+	transform: rotate(-45deg);
+}
