@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Navigation from './components/Navigation/Navigation';
 import Slider from './components/Slider/Slider';
 import './App.css';
@@ -10,7 +9,7 @@ class App extends Component {
       <div className="App vh-100">
         <Navigation />
         <Slider />
-        <header className="App-header">
+{/*        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -23,7 +22,7 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header>*/}
       </div>
     );
   }

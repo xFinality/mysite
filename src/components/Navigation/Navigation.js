@@ -1,8 +1,9 @@
 import React from 'react';
+import './Navigation.css';
 
 const Navigation = () => {
 	return (
-		<nav className='flex items-center '>
+		<nav className='flex items-center vh-5'>
 			<div className='flex items-center pv0 mv0 w-third'>
 				<p className='ph2 pv0 mv0 br'>Home</p>
 				<p className='ph2 pv0 mv0 br'>Project</p>
