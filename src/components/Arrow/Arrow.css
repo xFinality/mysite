@@ -1,22 +1,3 @@
-.h-95 {
-	height: 95%;
-}
-
-.h-5 {
-	height: 5%;
-}
-
-/*.w-button {
-	width: 2.5em;
-}
-*/
-.circle {
-	height: 1em;
-  	width: 1em;
-	background-color: #666;
-	border-radius: 50%;
-}
-/*
 .arrow {
 	width: 25px;
 	height: 25px;
@@ -26,10 +7,14 @@
  	padding: 3px;
 }
 
+.w-button {
+	width: 2.5em;
+}
+
 .button-prev {
 	transform: rotate(135deg);
 }
 
 .button-next {
 	transform: rotate(-45deg);
-}*/
+}
