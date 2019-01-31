@@ -3,12 +3,31 @@ import Navigation from './components/Navigation/Navigation';
 import Slider from './components/Slider/Slider';
 import './App.css';
 
+const intialState = {
+  route: 'home'
+}
+
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = intialState;
+  }
+
+  onRouteChange = (route) => {
+    this.setState({route:route});
+  }
+
   render() {
+    const {route} = this.state;
     return (
       <div className="App vh-100">
-        <Navigation />
-        <Slider />
+        <Navigation onRouteChange={this.onRouteChange}/>
+        { route === 'home'
+        ?
+          <Slider />
+          : <div></div>
+        }
 {/*        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
