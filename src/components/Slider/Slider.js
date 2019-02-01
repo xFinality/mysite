@@ -5,7 +5,9 @@ import Circle from '../Circle/Circle';
 import SliderImage from '../SliderImage/SliderImage';
 
 const initialState = {
-	image: 0
+	oldImage: 0,
+	image: 0,
+	imageStyle: ''
 }
 
 class Slider extends Component {
@@ -16,26 +18,35 @@ class Slider extends Component {
 
 	onClickArrow = (direction) => {
 		const {image} = this.state;
-		if(direction === 'prev')
-			if(image === 0)
+		this.setState({oldImage:image});
+		this.setState({imageStyle:'img'});
+		if(direction === 'prev'){
+			if(image === 0){
 				this.setState({image: 2});
-			else
+			}
+			else{
 				this.setState({image:image-1});
-		else if(direction ==='next')
-			if(image === 2)
+			}
+		}
+		else if(direction ==='next'){
+			if(image === 2){
 				this.setState({image: 0});
-			else
+			}
+			else{
 				this.setState({image:image+1});
+			}
+		}
 	}
 
 	render() {
-		const {image} = this.state;
+		const {oldImage, image} = this.state;
+		//console.log(oldImage, image, this.state.imageStyle)
 		return(
 			<div className='flex flex-column  vh-50 '>
 				<div className='flex items-center justify-center bt bb h-95 w-100 overflow-hidden'>
 					<Arrow onClickArrow={() => this.onClickArrow('prev')} direction='button-prev'/>
 					<div className='w-50 h-100'>
-						<SliderImage img={image}/>
+						<SliderImage anim={this.state.imageStyle} oldImg={oldImage} img={image}/>
 					</div>
 					<Arrow onClickArrow={() => this.onClickArrow('next')} direction='button-next' />
 				</div>

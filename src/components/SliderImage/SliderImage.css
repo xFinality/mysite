@@ -1,0 +1,31 @@
+.image {
+/*	animation-name: img;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-play-state: running;*/
+	transition: transform 4s;
+}
+
+.image2 {
+	animation-name: img;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-play-state: running;
+}
+
+/*@keyframes img {
+	0% {*/
+		.img{
+			transform: translate(-100%);
+		}
+/*	}
+	100% {
+		transform: translate(0rem);
+	}
+}*/
+
+.w-300 {
+	width: 200%;
+}
