@@ -1,0 +1,40 @@
+.image {
+/*	animation-name: img;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-play-state: running;*/
+	transition: transform .5s ease-in-out;
+}
+
+.image2 {
+	animation-name: img;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-play-state: running;
+}
+
+/*@keyframes img {
+	0% {*/
+		.img{
+			transform: translate(-100%);
+		}
+
+		.img2{
+			transform: translate(100%);
+		}
+/*	}
+	100% {
+		transform: translate(0rem);
+	}
+}*/
+
+.w-300 {
+	width: 300%;
+}
+
+.moveLeft-third {
+	position:relative;
+	left:-33.3333333333%;
+}
