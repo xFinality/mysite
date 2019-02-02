@@ -15,44 +15,42 @@ class Slider_Image extends  Component {
 			anim:this.props.anim,
 			oldImg:this.props.oldImg,
 			img:this.props.img,
-			oldStyle: 'z-1 image w-50', //change mh6 to something better
-			newStyle: 'z-0 image w-50'
+			nextImg: this.props.nextImg,
+			oldStyle: 'image w-third moveLeft-third',
+			newStyle: 'image w-third moveLeft-third',
+			nextStyle: 'image w-third moveLeft-third'
 		}
 	}
 
 	arrowClicked = () => {
-		console.log('test')
 		return this.setState({
 			img:this.props.img,
 			oldImg:this.props.oldImg,
+			nextImg:this.props.nextImg,
 			anim:this.props.anim,
-			oldStyle: 'z-1 relative ',
-			newStyle: 'z-0 relative '
+			oldStyle: 'w-third moveLeft-third',
+			newStyle: 'w-third moveLeft-third',
+			nextStyle: 'w-third moveLeft-third'
 		});
 	}
 
 	static getDerivedStateFromProps(nextProps, prevState) {
 		if(nextProps.img!==prevState.img)
-			return {/*img:nextProps.img,
-					oldImg:nextProps.oldImg,
-					anim:nextProps.anim,*/
+			return {
 					oldStyle:prevState.oldStyle+' image '+nextProps.anim,
-					newStyle:prevState.newStyle+' image '+nextProps.anim};
+					newStyle:prevState.newStyle+' image '+nextProps.anim,
+					nextStyle:prevState.nextStyle+' image '+nextProps.anim};
 		else return null;
-		 //this.arrowClicked();
 	}
 
-	// console.log(onAnimationEnd)
 	render() {
-		const {anim, oldImg, img, oldStyle, newStyle} = this.state;
-		//console.log(anim, oldImg, img)
-		// let oldStyle = 'z-1 absolute ' + anim;
-		// let newStyle = 'z-0 relative ' + anim;
+		const {oldImg, img, nextImg, oldStyle, newStyle, nextStyle} = this.state;
+
 		return(
 				<div className='flex align-center overflow-hidden h-100 w-300'>
-					<img className={oldStyle} alt='' src={images[oldImg]} />
-					{/*<img className='w-third'/>*/}
-					<img className={newStyle} onTransitionEnd={this.arrowClicked} alt='' src={images[img]} />
+					<img className={oldStyle} alt='' src={images[oldImg]}/>
+					<img className={newStyle} alt='' src={images[img]} />
+					<img className={nextStyle} onTransitionEnd={this.arrowClicked} alt='' src={images[nextImg]} />
 				</div>
 		)
 	}
