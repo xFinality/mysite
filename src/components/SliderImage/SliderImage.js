@@ -19,11 +19,11 @@ const initialState = {
 class Slider_Image extends  Component {
 	constructor(props){
 		super(props);
-		console.log(initialState)
 		this.state = initialState;
 	}
 
 	arrowClicked = () => {
+		this.props.unlockArrow();
 		return this.setState({
 			img:this.props.img,
 			oldImg:this.props.oldImg,
