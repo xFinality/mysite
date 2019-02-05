@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import './Slider.css';
-import Arrow from '../Arrow/Arrow';
-import Circle from '../Circle/Circle';
+import './Arrow.css';
+import './Circle.css';
 import SliderImage from '../SliderImage/SliderImage';
 
 const initialState = {
 	oldImage: 2,
 	image: 0,
 	nextImage: 1,
-	imageStyle: ''
+	imageStyle: '',
+	arrowLock: false
 }
 
 class Slider extends Component {
@@ -18,16 +19,32 @@ class Slider extends Component {
 	}
 
 	onClickArrow = (direction) => {
-		const {image, nextImage, oldImage} = this.state;
+		const {image, nextImage, oldImage, arrowLock} = this.state;
 		this.setState({imageStyle:'img'});
-		if(direction === 'prev'){
+		if(direction === 'prev' && !arrowLock){
 			this.setState({imageStyle:'img2'});
 			this.setState({image:oldImage, oldImage:nextImage, nextImage:image})
 		}
-		else if(direction ==='next'){
+		else if(direction ==='next' && !arrowLock){
 			this.setState({imageStyle:'img'});
 			this.setState({image:nextImage, oldImage:image, nextImage:oldImage})
 		}
+		this.setState({arrowLock: true});
+	}
+
+	unlockArrow = () => {
+		this.setState({arrowLock:false})
+	}
+
+	onClickCircle = (oldImg, img, nextImg) => {
+		if(this.state.image > img) {
+			this.setState({image:img, oldImage:oldImg, nextImage:nextImg})
+			this.setState({imageStyle:'img2'});
+		} else if (this.state.image < img) {
+			this.setState({image:img, oldImage:oldImg, nextImage:nextImg})
+			this.setState({imageStyle:'img'});
+		}
+
 	}
 
 	render() {
@@ -35,17 +52,21 @@ class Slider extends Component {
 		return(
 			<div className='flex flex-column  vh-50 '>
 				<div className='flex items-center justify-center bt bb h-95 w-100 overflow-hidden'>
-					<Arrow onClickArrow={() => this.onClickArrow('prev')} direction='button-prev'/>
-					<div className='w-50 h-100 overflow-hidden'>
-						<SliderImage anim={this.state.imageStyle} nextImg={nextImage} oldImg={oldImage} img={image}/>
+					<div onClick={() => this.onClickArrow('prev')} className='w-button h-100 flex flex-column items-center justify-center pointer'>
+						<div className='arrow button-prev'></div>
 					</div>
-					<Arrow onClickArrow={() => this.onClickArrow('next')} direction='button-next' />
+					<div className='w-50 h-100 overflow-hidden'>
+						<SliderImage unlockArrow={this.unlockArrow} anim={this.state.imageStyle} nextImg={nextImage} oldImg={oldImage} img={image}/>
+					</div>
+					<div onClick={() => this.onClickArrow('next')} className='w-button h-100 flex flex-column items-center justify-center pointer'>
+						<div className='arrow button-next'></div>
+					</div>				
 				</div>
-				<div className='flex items-center justify-center bt bb w-100 h-5 mv0 pv0'>
-					<Circle />
-					<Circle />
-					<Circle />
-				</div>
+{/*				<div className='flex items-center justify-center bt bb w-100 h-5 mv0 pv0'>
+					<div onClick={() => this.onClickCircle(2,0,1)} className='mr2 circle'></div>
+					<div onClick={() => this.onClickCircle(0,1,2)} className='mr2 circle'></div>
+					<div onClick={() => this.onClickCircle(1,2,0)} className='mr2 circle'></div>
+				</div>*/}
 			</div>
 		)
 	}
