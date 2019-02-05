@@ -5,9 +5,9 @@ const Navigation = ({onRouteChange}) => {
 	return (
 		<nav className='flex items-center vh-5'>
 			<div className='flex items-center pv0 mv0 w-third'>
-				<p onClick={() => onRouteChange('home')} className='ph2 pv0 mv0 br link pointer'>Home</p>
-				<p onClick={() => onRouteChange('project')} className='ph2 pv0 mv0 br link pointer'>Project</p>
-				<p onClick={() => onRouteChange('about')} className='ph2 pv0 mv0 br link pointer'>About me</p>
+				<p onClick={() => onRouteChange('home')} className='ph3 pv0 mv0 link pointer'>Home</p>
+				<p onClick={() => onRouteChange('project')} className='ph3 pv0 mv0 link pointer'>Project</p>
+				<p onClick={() => onRouteChange('about')} className='ph3 pv0 mv0 link pointer'>About me</p>
 			</div>
 			<div className='flex flex-column justify-center items-center mv0 pv0 w-third'>
 				<p className='mv0 pv0'>Thomas MERAT</p>
