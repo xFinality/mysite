@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Slider from './components/Slider/Slider';
+import Presentation from './components/Presentation/Presentation';
 import './App.css';
 
 const intialState = {
@@ -25,7 +26,10 @@ class App extends Component {
         <Navigation onRouteChange={this.onRouteChange}/>
         { route === 'home'
         ?
-          <Slider />
+          <div>
+            <Slider />
+            <Presentation />
+          </div>
           : <div></div>
         }
 {/*        <header className="App-header">

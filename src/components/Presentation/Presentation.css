@@ -1,0 +1,18 @@
+p {
+	padding: 0;
+	margin-bottom: auto;
+	line-height: 1.2;
+}
+
+.pres {
+	text-transform: none;
+}
+
+.vh-40 {
+	height: 39vh;
+}
+
+.logo {
+	max-height: 50%;
+	width: auto;
+}
