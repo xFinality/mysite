@@ -3,7 +3,7 @@ import './Navigation.css';
 
 const Navigation = ({onRouteChange}) => {
 	return (
-		<nav className='flex items-center vh-5 nav-background bb bt'>
+		<nav className='flex items-center vh-5 nav-background bb bt nav-top'>
 			<div className='flex items-center pv0 mv0 w-third'>
 				<p onClick={() => onRouteChange('home')} className='ph3 pv0 mv0 link pointer'>Home</p>
 				<p onClick={() => onRouteChange('project')} className='ph3 pv0 mv0 link pointer'>Project</p>

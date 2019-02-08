@@ -40,9 +40,9 @@
 }
 
 .image-slider {
-	opacity: 0.2;
+	opacity: 0.5;
 }
 
 .image-slider:hover {
-	opacity: 0.5;
+	opacity: 1;
 }

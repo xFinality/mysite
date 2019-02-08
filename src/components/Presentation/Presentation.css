@@ -8,6 +8,15 @@ p {
 	text-transform: none;
 }
 
+.pres-title {
+	transform: translateY(10%);
+
+}
+
+.pres-text {
+	transform: translateY(10%);
+}
+
 .vh-40 {
 	height: 39vh;
 }
@@ -15,4 +24,5 @@ p {
 .logo {
 	max-height: 50%;
 	width: auto;
+	transform: translateY(50%);
 }
