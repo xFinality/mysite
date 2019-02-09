@@ -1,3 +1,55 @@
-.vh-5 {
-	height: 5vh;
+.link-nav {
+	/*transition: all .2s ease-in-out;*/
+	text-transform: capitalize;
+	float: left;
+}
+
+.link-nav:hover, .link-contact:hover {
+	color: white;/*#453D37;
+	text-shadow: 1px 1px 5px white;
+	/*transform: scale(1.1);*/
+	text-decoration: underline;
+}
+
+.link-contact {
+	float: right;
+}
+
+.nav-background {
+	background-color: #C2B2A6;
+}
+
+.nav-top {
+	overflow: hidden;
+}
+
+.nav-top p{
+	display: inline-block;
+}
+
+@media screen and (min-width: 801px) {
+  .name {
+    visibility: visible;
+    margin: auto;
+  }
+  .links{
+  	width: 40%;
+  }
+  .links-contact{
+  	width: 40%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .name {
+    visibility: hidden;
+    width: 10px;
+  }
+  .links{
+  	width: 80%;
+  	float: initial;
+  }
+  .links-contact{
+  	width: 20%;
+  }
 }

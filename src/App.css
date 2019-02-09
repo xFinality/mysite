@@ -1,10 +1,11 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  /*background-color: #56504B;*/
+  color: #040200; /*#1B140F; /*#F3E9E1;*/
+  font-size: 1.2em;
+  /*font-weight: bold;*/
+  font-family: Verdana, sans-serif;
+  background-image: linear-gradient(to top, #56524B , #C2B2A6);
 }
 
 .App-header {
@@ -22,11 +23,26 @@
   color: #61dafb;
 }
 
+.vh-5{
+  height: 5vh;
+}
+
+.ma-auto {
+  margin: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .App {
+    font-size: 0.8em;
   }
 }

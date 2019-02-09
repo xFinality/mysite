@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Slider from './components/Slider/Slider';
+import Presentation from './components/Presentation/Presentation';
 import './App.css';
 
 const intialState = {
@@ -25,9 +26,15 @@ class App extends Component {
         <Navigation onRouteChange={this.onRouteChange}/>
         { route === 'home'
         ?
-          <Slider />
+          <div>
+            <Slider />
+            <Presentation />
+          </div>
           : <div></div>
         }
+        <footer className='vh-5 flex justify-center items-center'>
+          <p className='ma-auto'>Made by Thomas Merat</p>
+        </footer>
 {/*        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

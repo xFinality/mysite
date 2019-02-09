@@ -13,7 +13,7 @@ const initialState = {
 	oldImg:2,
 	img:0,
 	nextImg: 1,
-	newStyle: 'image w-third moveLeft-third'
+	newStyle: 'image w-third moveLeft-third image-slider'
 }
 
 class Slider_Image extends  Component {
@@ -29,7 +29,7 @@ class Slider_Image extends  Component {
 			oldImg:this.props.oldImg,
 			nextImg:this.props.nextImg,
 			anim:this.props.anim,
-			newStyle: 'w-third moveLeft-third'
+			newStyle: 'w-third moveLeft-third image-slider'
 		});
 	}
 

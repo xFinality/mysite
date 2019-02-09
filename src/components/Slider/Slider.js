@@ -51,15 +51,15 @@ class Slider extends Component {
 		const {oldImage, image, nextImage} = this.state;
 		return(
 			<div className='flex flex-column  vh-50 '>
-				<div className='flex items-center justify-center bt bb h-95 w-100 overflow-hidden'>
-					<div onClick={() => this.onClickArrow('prev')} className='w-button h-100 flex flex-column items-center justify-center pointer'>
-						<div className='arrow button-prev'></div>
+				<div className='flex items-center justify-center bt bb shad h-100 w-100 overflow-hidden'>
+					<div  className='w-button h-100 flex flex-column items-center justify-center'>
+						<div onClick={() => this.onClickArrow('prev')} className='arrow button-prev pointer'></div>
 					</div>
-					<div className='w-50 h-100 overflow-hidden'>
+					<div className='w16-9 h-100 overflow-hidden'>
 						<SliderImage unlockArrow={this.unlockArrow} anim={this.state.imageStyle} nextImg={nextImage} oldImg={oldImage} img={image}/>
 					</div>
-					<div onClick={() => this.onClickArrow('next')} className='w-button h-100 flex flex-column items-center justify-center pointer'>
-						<div className='arrow button-next'></div>
+					<div className='w-button h-100 flex flex-column items-center justify-center'>
+						<div onClick={() => this.onClickArrow('next')} className='arrow button-next pointer'></div>
 					</div>				
 				</div>
 {/*				<div className='flex items-center justify-center bt bb w-100 h-5 mv0 pv0'>
