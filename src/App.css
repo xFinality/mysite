@@ -23,6 +23,14 @@
   color: #61dafb;
 }
 
+.vh-5{
+  height: 5vh;
+}
+
+.ma-auto {
+  margin: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,7 +41,7 @@
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
   .App {
     font-size: 0.8em;
   }

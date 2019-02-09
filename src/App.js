@@ -32,6 +32,9 @@ class App extends Component {
           </div>
           : <div></div>
         }
+        <footer className='vh-5 flex justify-center items-center'>
+          <p className='ma-auto'>Made by Thomas Merat</p>
+        </footer>
 {/*        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
