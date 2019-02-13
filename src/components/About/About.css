@@ -1,0 +1,11 @@
+.w-45 {
+	width: 45%;
+}
+
+.w-5 {
+	width: 5%;
+}
+
+.overflow-y-overlay {
+	overflow-y: overlay;
+}

@@ -6,9 +6,9 @@ import css3_logo from './images/css3.png';
 import js_logo from './images/js.png';
 import nodejs_logo from './images/nodejs.png';
 import clarifai_logo from './images/clarifai.png';
+import robohash_logo from './images/robohash.png';
+import redux_logo from './images/redux.png';
 import Searchbox from './Searchbox';
-
-//let logo = [];
 
 class CardList extends Component {
 	constructor() {
@@ -22,10 +22,8 @@ class CardList extends Component {
 		this.setState({ searchfield: event.target.value})
 	}
 
-	render() {
-		const projects = this.props.projects;
-		const {searchfield} = this.state;
-		const filteredProjects = projects.filter(project => {
+	getFilteredProjects = (projects, searchfield) => {
+		return projects.filter(project => {
 			return (
 				project.skill.map((skill, i) => {
 					return skill.toLowerCase().includes(searchfield.toLowerCase());
@@ -37,6 +35,47 @@ class CardList extends Component {
 			)
 
 		})
+	}
+
+	getProjectSkillLogo = (project, logo) => {
+		project.skill.map((skill, i) => {
+			switch(skill) {
+				case 'html5' :
+					logo[i] = html5_logo;
+					break;
+				case 'css3' :
+					logo[i] = css3_logo;
+					break;
+				case 'js' :
+					logo[i] = js_logo;
+					break;
+				case 'react' :
+					logo[i] = react_logo;
+					break;
+				case 'redux' :
+					logo[i] = redux_logo;
+					break;
+				case 'nodejs' :
+					logo[i] = nodejs_logo;
+					break;
+				case 'clarifai' :
+					logo[i] = clarifai_logo;
+					break;
+				case 'robohash' :
+					logo[i] = robohash_logo;
+					break;
+				default:
+					break;
+			}
+			return logo;
+		})
+		return logo;
+	}
+
+	render() {
+		const projects = this.props.projects;
+		const {searchfield} = this.state;
+		const filteredProjects = this.getFilteredProjects(projects, searchfield); 
 
 		let logo = [];
 		return(
@@ -45,31 +84,7 @@ class CardList extends Component {
 				{ 
 					filteredProjects.map((project, i) => {
 						logo = [];
-						project.skill.map((skill, i) => {
-							switch(skill) {
-								case 'html5' :
-									logo[i] = html5_logo;
-									break;
-								case 'css3' :
-									logo[i] = css3_logo;
-									break;
-								case 'js' :
-									logo[i] = js_logo;
-									break;
-								case 'react' :
-									logo[i] = react_logo;
-									break;
-								case 'nodejs' :
-									logo[i] = nodejs_logo;
-									break;
-								case 'clarifai' :
-									logo[i] = clarifai_logo;
-									break;
-								default:
-									break;
-							}
-							return logo;
-						})
+						logo = this.getProjectSkillLogo(project,logo);
 
 						return(
 							<div key={i}>

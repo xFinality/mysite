@@ -3,11 +3,14 @@ import Navigation from './components/Navigation/Navigation';
 import Slider from './components/Slider/Slider';
 import Presentation from './components/Presentation/Presentation';
 import CardList from './components/Projects/CardList';
+import About from './components/About/About';
 import './App.css';
 
 const intialState = {
   route: 'home',
-  projects: []
+  projects: [],
+  about_text: [],
+  about_skills: []
 }
 
 
@@ -28,10 +31,8 @@ class App extends Component {
         .then(response => response.json())
         .then(data => {
           this.setState({projects:data});
-          // console.log(data)
       })
-    }
-
+    } 
   }
 
   render() {
@@ -50,7 +51,7 @@ class App extends Component {
             <CardList projects={this.state.projects}/>
           : route === 'about'
           ?
-            <div>about</div>
+            <About about_text={this.state.about_text} about_skills={this.state.about_skills} />
           : route === 'contact'
           ?
             <div>contact</div>
