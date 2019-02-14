@@ -7,12 +7,8 @@ import About from './components/About/About';
 import './App.css';
 
 const intialState = {
-  route: 'home',
-  projects: [],
-  about_text: [],
-  about_skills: []
+  route: 'home'
 }
-
 
 class App extends Component {
   constructor() {
@@ -22,17 +18,6 @@ class App extends Component {
 
   onRouteChange = (route) => {
     this.setState({route:route});
-    if(route === 'project' && this.state.projects.length === 0) {
-        fetch('http://localhost:3000/projects', {
-          method: 'post',
-          headers: {'Content-Type' : 'application/json'},
-          body: ''
-        })
-        .then(response => response.json())
-        .then(data => {
-          this.setState({projects:data});
-      })
-    } 
   }
 
   render() {
@@ -48,13 +33,10 @@ class App extends Component {
           </div>
           : route === 'project'
           ?
-            <CardList projects={this.state.projects}/>
+            <CardList />
           : route === 'about'
           ?
-            <About about_text={this.state.about_text} about_skills={this.state.about_skills} />
-          : route === 'contact'
-          ?
-            <div>contact</div>
+            <About />
           :<div></div>
         }
         <footer className='absolute bottom-0 w-100 vh-5 flex justify-center items-center bt'>

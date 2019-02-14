@@ -6,7 +6,6 @@ class About extends Component {
 		super();
 		this.state= {
 			aboutText:  [],
-			aboutSkills: [],
 			frontEnd: [],
 			backEnd:[],
 			developer:[]
@@ -31,8 +30,7 @@ class About extends Component {
           })
           .then(response => response.json())
           .then(data => {
-            this.setState({aboutSkills:data});
-      	  	this.getCategorySkills(this.state.aboutSkills);
+      	  	this.getCategorySkills(data);
         	})
 
 	}
@@ -85,7 +83,7 @@ class About extends Component {
 				<div className='w-45 h-90'>
 				{
 					<div className='flex flex-column items-center h-100'>
-						<ol className='flex flex-column flex-wrap items-center w-90 h-100 pa0 list ba shad-card'>
+						<ol className='flex flex-column items-center w-90 h-100 pa0 list ba shad-card'>
 							<h3>Front End Skills</h3>
 							<div className='flex flex-wrap items-center'>
 							{
@@ -97,7 +95,7 @@ class About extends Component {
 							}
 							</div>
 						</ol>
-						<ol className='flex flex-column flex-wrap items-center w-90 h-100 pa0 list ba shad-card'>
+						<ol className='flex flex-column items-center w-90 h-100 pa0 list ba shad-card'>
 							<h3>Back End Skills</h3>
 							<div className='flex flex-wrap items-center'>
 							{
@@ -109,7 +107,7 @@ class About extends Component {
 							}
 							</div>
 						</ol>
-						<ol className='flex flex-column flex-wrap items-center w-90 h-100 pa0 list ba shad-card'>
+						<ol className='flex flex-column items-center w-90 h-100 pa0 list ba shad-card'>
 							<h3>Developer Skills</h3>
 							<div className='flex flex-wrap items-center'>
 							{

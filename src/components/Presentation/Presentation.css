@@ -27,24 +27,7 @@ p {
 	transform: translateY(50%);
 }
 
-@media screen and (min-width: 801px) {
-	.logo1{
-		padding-right: 4rem;
-	}
-	.logo2{
-		padding-right: 2rem;
-	}
-	.logo3{
-		padding-left: 2rem;
-	}
-	.logo4{
-		padding-left: 4rem;
-	}
-}
-
-@media screen and (max-width: 800px) {
-	.logo {
-		padding-left: 0;
-		padding-right: 0;
-	}
+.logo2 {
+	padding-right: 4rem;
+	padding-left: 4rem;
 }

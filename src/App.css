@@ -1,11 +1,11 @@
 .App {
   text-align: center;
   /*background-color: #56504B;*/
-  color: #040200; /*#1B140F; /*#F3E9E1;*/
-  font-size: 1.2em;
+  color: #D2DADD; /*#1B140F; /*#F3E9E1;*/
+  font-size: 1.2rem;
   /*font-weight: bold;*/
-  font-family: Verdana, sans-serif;
-  background-image: linear-gradient(to top, #56524B , #C2B2A6);
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  background-image: linear-gradient(to top, #212526 , #41484A);
 }
 
 .App-header {
@@ -31,6 +31,10 @@
   margin: auto;
 }
 
+footer {
+  background-color: #41484A;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -41,7 +45,7 @@
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px), screen and (max-height: 600px)  {
   .App {
     font-size: 0.8em;
   }

@@ -14,15 +14,29 @@ class CardList extends Component {
 	constructor() {
 		super();
 		this.state = {
-			searchfield: ''
+			searchfield: '',
+			projects: []
 		}
+	}
+
+	componentDidMount() {
+		fetch('http://localhost:3000/projects', {
+          method: 'post',
+          headers: {'Content-Type' : 'application/json'},
+          body: ''
+        })
+        .then(response => response.json())
+        .then(data => {
+          this.setState({projects:data});
+      })
 	}
 
 	onSearchChange = (event) => {
 		this.setState({ searchfield: event.target.value})
 	}
 
-	getFilteredProjects = (projects, searchfield) => {
+	getFilteredProjects = (searchfield) => {
+		const {projects} = this.state;
 		return projects.filter(project => {
 			return (
 				project.skill.map((skill, i) => {
@@ -73,9 +87,8 @@ class CardList extends Component {
 	}
 
 	render() {
-		const projects = this.props.projects;
 		const {searchfield} = this.state;
-		const filteredProjects = this.getFilteredProjects(projects, searchfield); 
+		const filteredProjects = this.getFilteredProjects(searchfield); 
 
 		let logo = [];
 		return(
