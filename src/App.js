@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Slider from './components/Slider/Slider';
 import Presentation from './components/Presentation/Presentation';
+import CardList from './components/Projects/CardList';
+import About from './components/About/About';
 import './App.css';
 
 const intialState = {
   route: 'home'
 }
-
 
 class App extends Component {
   constructor() {
@@ -30,10 +31,16 @@ class App extends Component {
             <Slider />
             <Presentation />
           </div>
-          : <div></div>
+          : route === 'project'
+          ?
+            <CardList />
+          : route === 'about'
+          ?
+            <About />
+          :<div></div>
         }
-        <footer className='vh-5 flex justify-center items-center'>
-          <p className='ma-auto'>Made by Thomas Merat</p>
+        <footer className='absolute bottom-0 w-100 vh-5 flex justify-center items-center bt'>
+          <p className='ma-auto'>© Developed and designed by Thomas Merat 2019</p>
         </footer>
 {/*        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

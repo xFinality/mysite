@@ -13,7 +13,7 @@ const Navigation = ({onRouteChange}) => {
 				<p className='mv0 pv0'>Thomas Merat</p>
 			</div>
 			<div className='links-contact'>
-				<p onClick={() => onRouteChange('contact')} className=' pr2 mr3 mv0 pv0 pointer link-contact'>Contact</p>
+				{/*<p onClick={() => onRouteChange('contact')} className=' pr2 mr3 mv0 pv0 pointer link-contact'>Contact</p>*/}
 			</div>
 		</nav>
 		)

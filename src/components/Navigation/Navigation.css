@@ -16,7 +16,10 @@
 }
 
 .nav-background {
-	background-color: #C2B2A6;
+	background-color: #41484A;
+  background-color: #282c34;
+  border-color: #F5C1B6;
+  color: #F5C1B6;
 }
 
 .nav-top {
@@ -27,10 +30,11 @@
 	display: inline-block;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 801px), screen and (min-height: 601px)  {
   .name {
     visibility: visible;
     margin: auto;
+    font-size: 1.4rem;
   }
   .links{
   	width: 40%;
@@ -40,7 +44,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px), screen and (max-height: 600px)  {
   .name {
     visibility: hidden;
     width: 10px;

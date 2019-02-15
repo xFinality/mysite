@@ -1,0 +1,53 @@
+.card-width {
+	width: 100vh;
+}
+
+.h-90 {
+	height: 90%;
+}
+
+.h-56 {
+	height: 56%;
+}
+
+.h-87 {
+	height: 87%;
+}
+
+.shad-card {
+	box-shadow: 0px 10px 40px -10px #1D1510, 0 -10px 40px -10px #1D1510, 10px 0px 40px -10px #1D1510, -10px 0px 40px -10px #1D1510;
+	background-color: #282c34;
+	border-color: #F5E3B6;
+}
+
+.br-yellow {
+	border-color: #F5E3B6;
+}
+
+.logo-card {
+	width: 15%;
+	height: 15%;
+}
+
+.vw-75 {
+	width: 80vw;
+}
+
+.vh-42 {
+	height: 42vh;
+}
+
+.h-maxcontent {
+	height: max-content;
+}
+
+.card-title {
+	color: #F5E3B6;
+}
+
+@media screen and (max-width: 800px), screen and (max-height: 600px) {
+	.logos{
+		visibility: hidden;
+	}
+
+}

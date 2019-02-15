@@ -1,0 +1,13 @@
+.searchbox {
+	background-color: #41484A;
+	border-color: #A3B5BB;
+}
+
+.searchbox::placeholder {
+	color: #A3B5BB;
+	opacity: .9;
+}
+
+.shad-searchbox {
+	box-shadow: inset 0px 10px 40px -20px #5A6467, inset 0 -10px 40px -20px #5A6467;
+}

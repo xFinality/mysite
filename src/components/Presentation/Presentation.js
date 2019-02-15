@@ -1,27 +1,26 @@
 import React from 'react';
 import './Presentation.css';
-import logoHtml from './img/html5.png';
-import logoCSS from './img/css3.png';
-import logoJS from './img/js.png';
-import logoReact from './img/react-logo.png';
+
+import logoEmail from './img/email2.png';
+import logoGitHub from './img/github_white.png';
+import logoLinkedIn from './img/linkedin2.png';
 
 const Presentation = () => {
 	return(
-		<div className='pt1 bt bb vh-40 w-100 pres'>
-			<div className='h-50 w-100 mt0 pt0'>
+		<div className='pt1 bt bb vh-40 w-100 pres shad-card'>
+			<div className='h-50 w-100 mt0 pt0 overflow-y-overlay'>
 				<p className='pres-title mt0'>Welcome to my website !</p>
-				<p className='pres-text'>Hi, I'm Thomas. I'm a developer. Welcome to my website. 
-					Here you will see my projects done in the 'Project' section. 
-					You can also find more informations about me in the 'About me' section.
-					And you can contact me in the 'Contact' section.<br/>
+				<p className='pres-text'>Hi, I'm Thomas. I'm a developer. Welcome to my website.<br/> 
+					Here you will see my projects done in the 'Project' section. <br/>
+					You can also find more informations about me in the 'About me' section.<br/>
+					And you can contact me with the logos below.<br/>
 					Enjoy your time here !
 				</p>
 			</div>
 			<div className='h-50 w-100 center'>
-				<img alt='' src={logoHtml}  className='logo logo1'/>
-				<img alt='' src={logoCSS}  className='logo logo2'/>
-				<img alt='' src={logoJS}  className='logo logo3'/>
-				<img alt='' src={logoReact}  className='logo logo4'/>
+				<a href="mailto:merat.thomas@gmail.com" ><img alt='' src={logoEmail}  className='logo logo1'/></a>
+				<a href="https://github.com/xFinality" ><img alt='' src={logoGitHub}  className='logo logo2'/></a>
+				<a href="https://www.linkedin.com/in/thomasmerat" ><img alt='' src={logoLinkedIn}  className='logo logo3'/></a>
 			</div>
 		</div>
 	)
