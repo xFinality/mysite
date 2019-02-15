@@ -6,11 +6,12 @@ p {
 
 .pres {
 	text-transform: none;
+	border-color: #F5E3B6;
 }
 
 .pres-title {
 	transform: translateY(10%);
-
+	color: #F5E3B6;
 }
 
 .pres-text {

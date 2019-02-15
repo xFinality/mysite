@@ -17,6 +17,9 @@
 
 .nav-background {
 	background-color: #41484A;
+  background-color: #282c34;
+  border-color: #F5C1B6;
+  color: #F5C1B6;
 }
 
 .nav-top {

@@ -40,7 +40,7 @@ class App extends Component {
           :<div></div>
         }
         <footer className='absolute bottom-0 w-100 vh-5 flex justify-center items-center bt'>
-          <p className='ma-auto'>Made by Thomas Merat</p>
+          <p className='ma-auto'>© Developed and designed by Thomas Merat 2019</p>
         </footer>
 {/*        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

@@ -13,3 +13,12 @@
 .shad {
 	box-shadow: inset 0px 10px 40px -10px #1D1510, inset 0 -10px 40px -10px #1D1510;
 }
+
+.vh-45 {
+	height: 45vh;
+}
+
+.b-slider {
+	border-top-color: #F5C1B6;
+	border-bottom-color: #F5E3B6;
+}

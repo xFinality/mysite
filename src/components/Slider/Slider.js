@@ -50,8 +50,8 @@ class Slider extends Component {
 	render() {
 		const {oldImage, image, nextImage} = this.state;
 		return(
-			<div className='flex flex-column  vh-50 '>
-				<div className='flex items-center justify-center bt bb shad h-100 w-100 overflow-hidden'>
+			<div className='flex flex-column  vh-45 '>
+				<div className='flex items-center justify-center bt bb b-slider shad h-100 w-100 overflow-hidden'>
 					<div  className='w-button h-100 flex flex-column items-center justify-center'>
 						<div onClick={() => this.onClickArrow('prev')} className='arrow button-prev pointer'></div>
 					</div>

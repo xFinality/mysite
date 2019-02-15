@@ -32,7 +32,9 @@
 }
 
 footer {
-  background-color: #41484A;
+  background-color: #282c34;
+  border-color: #84B295;
+  color: #84B295;
 }
 
 @keyframes App-logo-spin {

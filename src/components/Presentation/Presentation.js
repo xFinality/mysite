@@ -7,7 +7,7 @@ import logoLinkedIn from './img/linkedin2.png';
 
 const Presentation = () => {
 	return(
-		<div className='pt1 bt bb vh-40 w-100 pres'>
+		<div className='pt1 bt bb vh-40 w-100 pres shad-card'>
 			<div className='h-50 w-100 mt0 pt0 overflow-y-overlay'>
 				<p className='pres-title mt0'>Welcome to my website !</p>
 				<p className='pres-text'>Hi, I'm Thomas. I'm a developer. Welcome to my website.<br/> 
