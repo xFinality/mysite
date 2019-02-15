@@ -15,7 +15,7 @@ class About extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3000/AboutText', {
+		fetch('https://sheltered-stream-79649.herokuapp.com/AboutText', {
 			method: 'post',
 			headers: {'Content-Type' : 'application/json'},
 			body: ''

@@ -20,7 +20,7 @@ class CardList extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3000/projects', {
+		fetch('https://sheltered-stream-79649.herokuapp.com/projects', {
           method: 'post',
           headers: {'Content-Type' : 'application/json'},
           body: ''
@@ -28,7 +28,7 @@ class CardList extends Component {
         .then(response => response.json())
         .then(data => {
           this.setState({projects:data});
-      })
+      	})
 	}
 
 	onSearchChange = (event) => {
