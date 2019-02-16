@@ -6,8 +6,13 @@
 	width: 5%;
 }
 
+.mtb-em {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 .overflow-y-overlay {
-	overflow-y: overlay;
+	overflow-y: auto;
 }
 
 .about-title {

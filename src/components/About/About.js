@@ -84,7 +84,7 @@ class About extends Component {
 				<div className='w-5'></div>
 				<div className='w-45 h-90 flex flex-column items-center'>
 				{
-					<div className='flex flex-column items-center w-90 h-100 shad-card ba mt3 mb3'>
+					<div className='flex flex-column items-center w-90 h-100 shad-card ba mtb-em'>
 						<a href={resume} className='overflow-y-overlay'>
 							<img src={resume2} alt="resume" />
 						</a>

@@ -24,6 +24,7 @@ p {
 
 .logo {
 	max-height: 50%;
+	max-width: 10%;
 	width: auto;
 	transform: translateY(50%);
 }
