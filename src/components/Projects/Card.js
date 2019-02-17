@@ -10,8 +10,8 @@ const Card = ({name, description, imageId, skill, git}) => {
 	}
 	return(
 		<div className='vw-75 flex content-stretch card-width ba shad-card card-container'>
-			<a href={git}>
-				<img className='card-component h-100 br br-yellow' alt='project' src={img_src} />
+			<a  className='card-component br br-yellow' href={git}>
+				<img className='' alt='project' src={img_src} />
 			</a>
 			<div className='card-component h-95 self-center flex flex-column'>
 				<h2 className='mt1 card-title'>{name}</h2>

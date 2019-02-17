@@ -60,6 +60,9 @@
 	.card-component{
 		width: 100%;
 	}
+	.br-yellow {
+		border-right: none;
+	}
 	.logos{
 		visibility: visible;
 	}
@@ -68,5 +71,9 @@
 @media screen and (orientation: landscape) {
 	.card-component{
 		width: 50%;
+	}
+	.br-yellow{
+		border-right: solid;
+		border-color: #F5E3B6;
 	}
 }
