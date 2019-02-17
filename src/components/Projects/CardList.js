@@ -107,7 +107,8 @@ class CardList extends Component {
 									name={filteredProjects[i].name}
 									description={filteredProjects[i].description}
 									imageId={filteredProjects[i].imageId}
-									skill={logo}/>
+									skill={logo}
+									git={filteredProjects[i].git}/>
 									{ i === filteredProjects.length-1 ?
 											<div className='vh-5 '></div>
 										:
