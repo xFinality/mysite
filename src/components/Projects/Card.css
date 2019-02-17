@@ -47,7 +47,26 @@
 
 @media screen and (max-width: 800px), screen and (max-height: 600px) {
 	.logos{
-		visibility: hidden;
+		visibility: visible;
 	}
 
+}
+
+@media screen and (orientation: portrait) {
+	.card-container{
+		display: flex;
+		flex-direction: column;
+	}
+	.card-component{
+		width: 100%;
+	}
+	.logos{
+		visibility: visible;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.card-component{
+		width: 50%;
+	}
 }

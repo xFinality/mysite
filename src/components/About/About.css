@@ -18,3 +18,37 @@
 .about-title {
 	color: #F5E3B6;
 }
+
+.about-button {
+	color: #F5E3B6;
+}
+
+.about-button:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+@media screen and (orientation: portrait) {
+	.about-part2{
+		display: none;
+		width: 90%;
+	}
+	.about-part1 {
+		width: 90%;
+	}
+	.about-link{
+		border-color: #F5E3B6;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.about-part2{
+		display: flex !important;
+	}
+	.about-part1{
+		display: flex !important;
+	}
+	.about-link{
+		display: none !important;
+	}
+}
