@@ -9,7 +9,12 @@
 /coverage
 
 # production
-/build
+# /build
+# i added these so mlaybe wrong
+src/*
+public/*
+build/static/css/*.map
+build/static/js/*.map
 
 # misc
 .DS_Store
