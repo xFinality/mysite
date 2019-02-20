@@ -10,7 +10,7 @@
 
 # production
 # /build
-# i added these so mlaybe wrong
+# i added these so mlaybe wron
 src/*
 public/*
 build/static/css/*.map
