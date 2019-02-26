@@ -7,36 +7,56 @@ import About from './components/About/About';
 import './App.css';
 
 const intialState = {
-  route: 'home'
+  route: 'home',
+  language:'en',
+  locales:''
 }
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = intialState;
+  }
+
+  componentWillMount() {
+    if(this.state.language === 'en') {
+      this.setState({locales:this.props.locales.en})
+    } else if (this.state.language === 'fr') {
+      this.setState({locales:this.props.locales.fr})
+    }
   }
 
   onRouteChange = (route) => {
     this.setState({route:route});
   }
 
+  changeLocale = () => {
+    if(this.state.language === "en"){
+      this.setState({language:"fr"})
+      this.setState({locales:this.props.locales.fr})
+    } else {
+      this.setState({language:"en"})
+      this.setState({locales:this.props.locales.en})
+    }
+  }
+
   render() {
     const {route} = this.state;
     return (
       <div className="App vh-100">
-        <Navigation onRouteChange={this.onRouteChange}/>
+        <Navigation onRouteChange={this.onRouteChange} locales={this.state.locales.navigation} changeLocale={this.changeLocale}/>
         { route === 'home'
         ?
           <div>
             <Slider />
-            <Presentation />
+            <Presentation locales={this.state.locales.presentation}/>
           </div>
           : route === 'project'
           ?
-            <CardList />
+            <CardList locales={this.state.locales.projects}/>
           : route === 'about'
           ?
-            <About />
+            <About locales={this.state.locales.about}/>
           :<div></div>
         }
         <footer className='absolute bottom-0 w-100 vh-5 flex justify-center items-center bt'>

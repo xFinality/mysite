@@ -16,6 +16,7 @@ p {
 
 .pres-text {
 	transform: translateY(10%);
+	white-space: pre-wrap;
 }
 
 .vh-40 {

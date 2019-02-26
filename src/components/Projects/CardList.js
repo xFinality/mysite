@@ -10,25 +10,32 @@ import robohash_logo from './images/robohash.png';
 import redux_logo from './images/redux.png';
 import Searchbox from './Searchbox';
 
+import projects from '../../data/projects/projects.js'
+
 class CardList extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
-			searchfield: '',
-			projects: []
+			searchfield: ''
 		}
 	}
 
 	componentDidMount() {
-		fetch('https://sheltered-stream-79649.herokuapp.com/projects', {
+
+/*		fetch('https://sheltered-stream-79649.herokuapp.com/projects', {
           method: 'post',
           headers: {'Content-Type' : 'application/json'},
           body: ''
         })
         .then(response => response.json())
         .then(data => {
+        	data.map((project, i) => {
+        		project.description = this.props.locales[i].description;
+        		project.name = this.props.locales[i].name;
+        		return project;
+        	})
           this.setState({projects:data});
-      })
+      })*/
 	}
 
 	onSearchChange = (event) => {
@@ -36,8 +43,12 @@ class CardList extends Component {
 	}
 
 	getFilteredProjects = (searchfield) => {
-		const {projects} = this.state;
-		return projects.filter(project => {
+		projects.projects.map((project, i) => {
+    		project.description = this.props.locales[i].description;
+    		project.name = this.props.locales[i].name;
+    		return project;
+       	})
+		return projects.projects.filter(project => {
 			return (
 				project.skill.map((skill, i) => {
 					return skill.toLowerCase().includes(searchfield.toLowerCase());

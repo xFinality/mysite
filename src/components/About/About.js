@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import './About.css'
 import resume from './resume.pdf';
-import resume2 from './resume2.png';
+import resume2 from './resume_fr.png';
 
 class About extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state= {
-			aboutText:  [],
 			show: 'motivation',
 			style1:{},
 			style2: {}/*,
@@ -18,7 +17,7 @@ class About extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://sheltered-stream-79649.herokuapp.com/AboutText', {
+/*		fetch('https://sheltered-stream-79649.herokuapp.com/AboutText', {
 			method: 'post',
 			headers: {'Content-Type' : 'application/json'},
 			body: ''
@@ -27,6 +26,9 @@ class About extends Component {
 		.then(data => {
 			this.setState({aboutText:data})
 		})
+		console.log(this.props)*/
+
+		/*this.setState({aboutText:this.props.locales.aboutText})*/
 
 /*		fetch('http://localhost:3000/aboutSkills', {
             method: 'post',
@@ -85,7 +87,7 @@ class About extends Component {
 	}
 
 	render() {
-		const {aboutText, style1, style2} = this.state;
+		const {style1, style2} = this.state;
 
 		return (
 			<div className='flex flex-column justify-center items-center w-100 h-90 shad'>
@@ -99,9 +101,9 @@ class About extends Component {
 							<h2 className='about-title'>About me and my motivation</h2>
 							<div className='flex flex-column items-center'>
 							{
-								aboutText.map((text, i) => {
+								this.props.locales.aboutText.map((text, i) => {
 									return (
-										<li key={i} className='w-80 mb2 mt2 tj'>{text.text}</li>
+										<li key={i} className='w-80 mb2 mt2 tj'>{text}</li>
 									)
 								})
 							}

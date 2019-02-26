@@ -5,16 +5,18 @@ import logoEmail from './img/email2.png';
 import logoGitHub from './img/github_white.png';
 import logoLinkedIn from './img/linkedin2.png';
 
-const Presentation = () => {
+const Presentation = (props) => {
 	return(
 		<div className='pt1 bt bb vh-40 w-100 pres shad-card'>
-			<div className='h-50 w-100 mt0 pt0 overflow-y-overlay'>
-				<p className='pres-title mt0'>Welcome to my website !</p>
-				<p className='pres-text'>Hi, I'm Thomas. I'm a developer. Welcome to my website.<br/> 
+			<div className='flex flex-column justify-center items-center h-50 w-100 mt0 pt0'>
+				<p className='pres-title mt0 mb0'>{props.locales.title}</p>
+				<p className='pres-text tj w-50  overflow-y-overlay'>{props.locales.text}
+
+				{/*Hi, I'm Thomas. I'm a developer. Welcome to my website.<br/> 
 					Here you will see my projects done in the 'Project' section. <br/>
 					You can also find more informations about me in the 'About me' section.<br/>
 					And you can contact me with the logos below.<br/>
-					Enjoy your time here !
+					Enjoy your time here !*/}
 				</p>
 			</div>
 			<div className='h-50 w-100 center'>
