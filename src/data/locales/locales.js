@@ -27,9 +27,9 @@ export default {
 			},
 		],
 		"about" : {
-			"motivation-button" : "Motivation",
-			"resume-button" : "Resume",
-			"about-title" : "About me and my motivation",
+			"motivationButton" : "Motivation",
+			"resumeButton" : "Resume",
+			"aboutTitle" : "About me and my motivations",
 			"aboutText" : [
 				"I have always liked playing games because of all the possibilities it opens. Creating a whole new world and traveling through it the smoothest way possible is what passionate me in these. That's why i decided to become a developer when i graduated and what kept me motivated until now to learn new things and create new project.",
 				"The evolution of the industry constantly changing and becoming easier to get the base of it is amazing. Everything is moving really fast but at the same time all of it is becoming way more accessible for anyone who want to try it or learn the base of it. That constant evolution is fascinating and require a constant learning of the new tools to stay at the top. I love that.",
@@ -66,9 +66,9 @@ export default {
 			},
 		],
 		"about" : {
-			"motivation-button" : "Motivation",
-			"resume-button" : "CV",
-			"about-title" : "A propos de moi et de mes motivation",
+			"motivationButton" : "Motivation",
+			"resumeButton" : "CV",
+			"aboutTitle" : "A propos de moi et de mes motivations",
 			"aboutText" : [
 				"J'ai toujours aimé les jeux vidéos pour toutes les possibilitées qu'ils donnent. Créer un tout nouveau monde et vivre cette expérience de la manière la plus fluide possible est ce qui me passione en eux. C'est pourquoi j'ai décidé de devenir développeur après mon BAC et ce qui ma motivé jusqu'à maintenant à apprendre de nouvelles choses et créer de nouveaux projets.",
 				"L'évolution de l'industrie changeant constamment et devenant plus facile d'avoir les bases est incroyable. Tout bouge si vite mais en même temps devient plus accessible pour quiconque veux s'y essayer et en apprendre les bases. Cette évolution constante est fascinante et requière un apprentissage constant des nouveaux outils pour rester à jour. J'adore ça.",

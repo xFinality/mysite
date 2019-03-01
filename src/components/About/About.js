@@ -92,13 +92,13 @@ class About extends Component {
 		return (
 			<div className='flex flex-column justify-center items-center w-100 h-90 shad'>
 				<div className='flex justify-center items-center mt3 shad-card h-5 w-100 ba about-link'>
-					<div className='pointer pr5 about-button' onClick={() => this.onShowChange('motivation')}>Motivation</div>
-					<div className='pointer about-button' onClick={() => this.onShowChange('resume')}>Resume</div>
+					<div className='pointer pr5 about-button' onClick={() => this.onShowChange('motivation')}>{this.props.locales.motivationButton}</div>
+					<div className='pointer about-button' onClick={() => this.onShowChange('resume')}>{this.props.locales.resumeButton}</div>
 				</div>
 				<div className='flex justify-center items-center w-100 h-100 '>
 					<div  style={style1} className='flex flex-column items-center w-45 h-90 about-part1'>
 						<ol className='flex flex-column items-center w-90 h-100 pa0 list ba shad-card overflow-y-overlay'>
-							<h2 className='about-title'>About me and my motivation</h2>
+							<h2 className='about-title'>{this.props.locales.aboutTitle}</h2>
 							<div className='flex flex-column items-center'>
 							{
 								this.props.locales.aboutText.map((text, i) => {
