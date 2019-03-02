@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Slider from './components/Slider/Slider';
 import Presentation from './components/Presentation/Presentation';
-import CardList from './components/Projects/CardList';
-import About from './components/About/About';
+
+//import CardList from './components/Projects/CardList';
+//import About from './components/About/About';
+
+import AsyncComponent from './components/AsyncComponent';
+
 import './App.css';
 
 const intialState = {
@@ -42,6 +46,16 @@ class App extends Component {
 
   render() {
     const {route} = this.state;
+    let content;
+
+    if(route === 'project') {
+      const AsyncCardList = AsyncComponent(() => import('./components/Projects/CardList'));
+      content = <AsyncCardList locales={this.state.locales.projects}/>
+    } else if(route ==='about') {
+      const AsyncAbout = AsyncComponent(() => import('./components/About/About'));
+      content = <AsyncAbout locales={this.state.locales.about}/>   
+    }
+
     return (
       <div className="App vh-100">
         <Navigation onRouteChange={this.onRouteChange} locales={this.state.locales.navigation} changeLocale={this.changeLocale}/>
@@ -53,10 +67,10 @@ class App extends Component {
           </div>
           : route === 'project'
           ?
-            <CardList locales={this.state.locales.projects}/>
+           content
           : route === 'about'
-          ?
-            <About locales={this.state.locales.about}/>
+          ? 
+             content
           :<div></div>
         }
         <footer className='absolute bottom-0 w-100 vh-5 flex justify-center items-center bt'>
