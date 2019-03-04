@@ -7,7 +7,7 @@ import logoLinkedIn from './img/linkedin2.png';
 
 const Presentation = (props) => {
 	return(
-		<div className='pt1 bt bb vh-40 w-100 pres shad-card'>
+		<article className='pt1 bt bb vh-40 w-100 pres shad-card'>
 			<div className='flex flex-column justify-center items-center h-50 w-100 mt0 pt0'>
 				<p className='pres-title mt0 mb0'>{props.locales.title}</p>
 				<p className='pres-text tj w-50  overflow-y-overlay'>{props.locales.text}
@@ -20,11 +20,11 @@ const Presentation = (props) => {
 				</p>
 			</div>
 			<div className='h-50 w-100 center'>
-				<a href="mailto:merat.thomas@gmail.com" ><img alt='' src={logoEmail}  className='logo logo1'/></a>
-				<a href="https://github.com/xFinality" ><img alt='' src={logoGitHub}  className='logo logo2'/></a>
-				<a href="https://www.linkedin.com/in/thomasmerat" ><img alt='' src={logoLinkedIn}  className='logo logo3'/></a>
+				<a name="email" href="mailto:merat.thomas@gmail.com" ><img alt='email' src={logoEmail}  className='logo logo1'/></a>
+				<a name="github" href="https://github.com/xFinality" ><img alt='github' src={logoGitHub}  className='logo logo2'/></a>
+				<a name="linkedIn" href="https://www.linkedin.com/in/thomasmerat" ><img alt='linkedIn' src={logoLinkedIn}  className='logo logo3'/></a>
 			</div>
-		</div>
+		</article>
 	)
 }
 

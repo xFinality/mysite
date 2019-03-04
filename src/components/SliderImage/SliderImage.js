@@ -44,7 +44,7 @@ class Slider_Image extends  Component {
 		const {oldImg, img, nextImg, newStyle} = this.state;
 
 		return(
-				<div className='flex align-center overflow-hidden h-100 w-300'>
+				<div className='flex align-center overflow-hidden h-100 w-300 '>
 					<img className={newStyle} alt='' src={images[oldImg]}/>
 					<img className={newStyle} alt='' src={images[img]} />
 					<img className={newStyle} onTransitionEnd={this.arrowClicked} alt='' src={images[nextImg]} />

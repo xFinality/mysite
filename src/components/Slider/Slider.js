@@ -50,12 +50,12 @@ class Slider extends Component {
 	render() {
 		const {oldImage, image, nextImage} = this.state;
 		return(
-			<div className='flex flex-column  vh-45 '>
+			<section className='flex flex-column  vh-45'>
 				<div className='flex items-center justify-center bt bb b-slider shad h-100 w-100 overflow-hidden'>
 					<div  className='w-button h-100 flex flex-column items-center justify-center'>
 						<div onClick={() => this.onClickArrow('prev')} className='arrow button-prev pointer'></div>
 					</div>
-					<div className='w16-9 h-100 overflow-hidden'>
+					<div className='w16-9 overflow-hidden'>
 						<SliderImage unlockArrow={this.unlockArrow} anim={this.state.imageStyle} nextImg={nextImage} oldImg={oldImage} img={image}/>
 					</div>
 					<div className='w-button h-100 flex flex-column items-center justify-center'>
@@ -67,7 +67,7 @@ class Slider extends Component {
 					<div onClick={() => this.onClickCircle(0,1,2)} className='mr2 circle'></div>
 					<div onClick={() => this.onClickCircle(1,2,0)} className='mr2 circle'></div>
 				</div>*/}
-			</div>
+			</section>
 		)
 	}
 }

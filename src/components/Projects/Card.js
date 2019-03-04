@@ -9,7 +9,7 @@ const Card = ({name, description, imageId, skill, git}) => {
 		img_src = require(`./images/img.jpg`);
 	}
 	return(
-		<div className='vw-75 flex content-stretch card-width ba shad-card card-container'>
+		<div className='vw-75 flex content-stretch ba shad-card card-container'>
 			<a  className='card-component br br-yellow' href={git}>
 				<img className='' alt='project' src={img_src} />
 			</a>

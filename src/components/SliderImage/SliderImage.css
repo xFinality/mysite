@@ -41,6 +41,7 @@
 
 .image-slider {
 	opacity: 0.5;
+	height: 100%
 }
 
 .image-slider:hover {

@@ -61,16 +61,16 @@ class App extends Component {
         <Navigation onRouteChange={this.onRouteChange} locales={this.state.locales.navigation} changeLocale={this.changeLocale}/>
         { route === 'home'
         ?
-          <div>
+          <main>
             <Slider />
             <Presentation locales={this.state.locales.presentation}/>
-          </div>
+          </main>
           : route === 'project'
           ?
-           content
+            content
           : route === 'about'
           ? 
-             content
+            content
           :<div></div>
         }
         <footer className='absolute bottom-0 w-100 vh-5 flex justify-center items-center bt'>
